@@ -1,7 +1,6 @@
 <?php
-namespace ELEMENTOR_AD_ERASER;
 
-require_once Elementor_Ad_Eraser_Globals::dir() . "includes/is-gutenberg-active.php";
+namespace ELEMENTOR_AD_ERASER;
 
 defined( "ABSPATH" ) or die;
 

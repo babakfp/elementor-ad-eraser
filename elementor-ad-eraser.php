@@ -1,4 +1,5 @@
 <?php
+
 namespace ELEMENTOR_AD_ERASER;
 
 defined( "ABSPATH" ) or die;

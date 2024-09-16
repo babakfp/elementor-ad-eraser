@@ -32,12 +32,7 @@ li:has([href="admin.php?page=go_elementor_pro"]) {
 
 /* In Elementor/Home page (/wp-admin/admin.php?page=elementor) */
 .toplevel_page_elementor
-/* Top header links */
-.e-admin-top-bar__bar-button {
-    /* "Upgrade Now" button */
-    &a[href="https://go.elementor.com/wp-dash-admin-top-bar-upgrade/"],
-    /* Just in case */
-    &:has(.eicon-upgrade-crown) {
-        display: none !important;
-    }
+/* Top header links - "Upgrade Now" button */
+.e-admin-top-bar__bar-button:has(.eicon-upgrade-crown) {
+    display: none !important;
 }

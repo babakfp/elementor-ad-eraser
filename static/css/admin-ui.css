@@ -1,0 +1,17 @@
+/* in /wp-admin/plugins.php page */
+.plugins-php
+/* in plugins table list */
+.the-list
+/* in title column */
+.plugin-title
+/* "Get Elementor Pro" element */
+.go_pro {
+    display: none !important;
+}
+
+/* in elementor menu on the sidebar */
+.wp-submenu
+/* the "Upgrade" element at the end of the menu */
+li:has([href="admin.php?page=go_elementor_pro"]) {
+    display: none !important;
+}

@@ -4,9 +4,23 @@
 #the-list
 /* in title column */
 .plugin-title
-/* "Get Elementor Pro" element */
-.go_pro {
-    display: none !important;
+/* actions */
+.row-actions {
+    /* "Get Elementor Pro" element */
+    .go_pro {
+        display: none !important;
+    }
+
+    /* Remove "|" after "Deactivate" */
+
+    /* "Deactivate" link wrapper */
+    .deactivate {
+        font-size: 0;
+    }
+    /* "Deactivate" link */
+    #deactivate-elementor {
+        font-size: 13px;
+    }
 }
 
 /* in elementor menu on the sidebar */

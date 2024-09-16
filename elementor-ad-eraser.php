@@ -2,7 +2,7 @@
 
 namespace ELEMENTOR_AD_ERASER;
 
-defined( "ABSPATH" ) or die;
+defined("ABSPATH") or die();
 
 /**
  * Plugin Name:                       Elementor Ad Eraser
@@ -19,8 +19,7 @@ defined( "ABSPATH" ) or die;
  * Domain Path:                       /languages
  */
 
-if ( !class_exists( "Elementor_Ad_Eraser_Globals" ) )
-{
+if (!class_exists("Elementor_Ad_Eraser_Globals")) {
     final class Elementor_Ad_Eraser_Globals
     {
         public static $version = "1.0.0";
@@ -28,12 +27,14 @@ if ( !class_exists( "Elementor_Ad_Eraser_Globals" ) )
         public static $requires_at_least = "5.0.0";
         public static $requires_php = "7.4.33";
 
-        public static function url() {
-            return plugin_dir_url( __FILE__ );
+        public static function url()
+        {
+            return plugin_dir_url(__FILE__);
         }
 
-        public static function dir() {
-            return plugin_dir_path( __FILE__ );
+        public static function dir()
+        {
+            return plugin_dir_path(__FILE__);
         }
     }
 }

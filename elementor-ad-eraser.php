@@ -6,7 +6,7 @@ defined("ABSPATH") or die();
 
 /**
  * Plugin Name:                       Elementor Ad Eraser
- * Description:                       Removes annoying ads from elementor page builder.
+ * Description:                       Removes intrusive ads from the Elementor interface for a cleaner, distraction-free experience.
  * Version:                           1.0.0
  * Tested up to:                      6.6.2
  * Requires at least:                 5.0.0

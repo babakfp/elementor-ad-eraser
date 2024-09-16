@@ -1,5 +1,5 @@
 /* Elements panel > Sticky ad at bottom: "Access all Pro widgets. Upgrade Now" */
-#elementor-panel-get-pro-elements-sticky
+#elementor-panel-get-pro-elements-sticky,
 /* Elements panel > Ad at bottom (end of scrollable area): "Get more with Elementor Pro", "Upgrade Now" */
 #elementor-panel-get-pro-elements,
 /* Edit widget panel > "Need Help" link */
@@ -9,7 +9,7 @@
 /* Elements panel > "Upgrade" text in right side of collapsable sections heading */
 .elementor-panel-heading-promotion,
 /* Edit widget panel > Generage with AI links in field labels */
-.elementor-control-field .e-ai-button,
+.elementor-control-field .e-ai-button
 /*  */ {
     display: none !important;
 }

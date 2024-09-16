@@ -31,8 +31,22 @@ li:has([href="admin.php?page=go_elementor_pro"]) {
 }
 
 /* In Elementor/Home page (/wp-admin/admin.php?page=elementor) */
-.toplevel_page_elementor
-/* Top header links - "Upgrade Now" button */
-.e-admin-top-bar__bar-button:has(.eicon-upgrade-crown) {
+.toplevel_page_elementor {
+    /* Top header links - "Upgrade Now" button */
+    /* [href="https://go.elementor.com/wp-dash-admin-top-bar-upgrade/"] */
+    .e-admin-top-bar__bar-button:has(.eicon-upgrade-crown) {
+        display: none !important;
+    }
+
+    .MuiPaper-root:has([href="https://go.elementor.com/go-pro-home-sidebar-upgrade/"])
+    {
+        display: none !important;
+    }
+}
+
+/* In media upload page (/wp-admin/upload.php) */
+.upload-php
+/* "Generate with Elementor AI" link */
+#e-image-ai-media-library {
     display: none !important;
 }

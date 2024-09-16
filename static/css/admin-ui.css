@@ -1,7 +1,7 @@
 /* in /wp-admin/plugins.php page */
 .plugins-php
 /* in plugins table list */
-.the-list
+#the-list
 /* in title column */
 .plugin-title
 /* "Get Elementor Pro" element */

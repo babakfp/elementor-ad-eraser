@@ -1,4 +1,4 @@
-/* in /wp-admin/plugins.php page */
+/* in plugins page (/wp-admin/plugins.php) */
 .plugins-php
 /* in plugins table list */
 #the-list
@@ -28,4 +28,16 @@
 /* the "Upgrade" element at the end of the menu */
 li:has([href="admin.php?page=go_elementor_pro"]) {
     display: none !important;
+}
+
+/* In Elementor/Home page (/wp-admin/admin.php?page=elementor) */
+.toplevel_page_elementor
+/* Top header links */
+.e-admin-top-bar__bar-button {
+    /* "Upgrade Now" button */
+    &a[href="https://go.elementor.com/wp-dash-admin-top-bar-upgrade/"],
+    /* Just in case */
+    &:has(.eicon-upgrade-crown) {
+        display: none !important;
+    }
 }

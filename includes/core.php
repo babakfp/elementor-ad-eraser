@@ -115,10 +115,6 @@ if (!class_exists("Elementor_Ad_Eraser")) {
             add_action(
                 "admin_enqueue_scripts",
                 function () {
-                    echo var_dump(
-                        is_plugin_active("elementor-pro/elementor-pro.php")
-                    );
-
                     if (!is_plugin_active("elementor-pro/elementor-pro.php")) {
                         wp_enqueue_style(
                             "elementor-ad-eraser--admin-ui-elementor-pro-not-active",

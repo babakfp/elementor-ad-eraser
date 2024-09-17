@@ -32,6 +32,11 @@ li:has([href="admin.php?page=go_elementor_pro"]) {
     display: none !important;
 }
 
+/* In WordPress sidebar menu > "Elementor" > "Add-ons" */
+.wp-submenu li:has([href="admin.php?page=elementor-apps"]) {
+    display: none !important;
+}
+
 /* In Elementor/Home page (/wp-admin/admin.php?page=elementor) */
 .toplevel_page_elementor {
     /* Top header links - "Upgrade Now" button */
@@ -40,8 +45,14 @@ li:has([href="admin.php?page=go_elementor_pro"]) {
         display: none !important;
     }
 
+    /* Elementor pro ad on right side of the page */
     .MuiPaper-root:has([href="https://go.elementor.com/go-pro-home-sidebar-upgrade/"])
     {
+        display: none !important;
+    }
+
+    /* Paid ad-ons content and link on bottom */
+    .MuiPaper-root [href*="/wp-admin/admin.php?page=elementor-apps"] {
         display: none !important;
     }
 }

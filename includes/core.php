@@ -105,6 +105,9 @@ if (!class_exists("Elementor_Ad_Eraser")) {
                 "admin_enqueue_scripts",
                 function () {
                     wp_dequeue_script("elementor-ai-admin");
+
+                    // "Optimize your images to enhance site performance by using Image Optimizer". I think this is a paid plugin (or at least it requires login). Not sure if this works.
+                    wp_dequeue_script("media-hints");
                 },
                 100
             );

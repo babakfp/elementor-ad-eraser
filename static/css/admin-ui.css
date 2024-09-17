@@ -52,7 +52,7 @@ li:has([href="admin.php?page=go_elementor_pro"]) {
     }
 
     /* Paid ad-ons content and link on bottom */
-    .MuiPaper-root [href*="/wp-admin/admin.php?page=elementor-apps"] {
+    .MuiPaper-root:has([href*="/wp-admin/admin.php?page=elementor-apps"]) {
         display: none !important;
     }
 }

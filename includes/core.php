@@ -23,15 +23,13 @@ if (!class_exists("Elementor_Ad_Eraser")) {
                     );
                 }
 
-                if (is_plugin_active("elementor/elementor.php")) {
-                    wp_enqueue_style(
-                        "elementor-ad-eraser--admin-ui",
-                        Elementor_Ad_Eraser_Globals::url() .
-                            "static/css/admin-ui.css",
-                        [],
-                        Elementor_Ad_Eraser_Globals::$version
-                    );
-                }
+                wp_enqueue_style(
+                    "elementor-ad-eraser--admin-ui",
+                    Elementor_Ad_Eraser_Globals::url() .
+                        "static/css/admin-ui.css",
+                    [],
+                    Elementor_Ad_Eraser_Globals::$version
+                );
             });
 
             add_action(
@@ -108,6 +106,28 @@ if (!class_exists("Elementor_Ad_Eraser")) {
 
                     // "Optimize your images to enhance site performance by using Image Optimizer". I think this is a paid plugin (or at least it requires login). Not sure if this works.
                     wp_dequeue_script("media-hints");
+                },
+                100
+            );
+
+            //
+
+            add_action(
+                "admin_enqueue_scripts",
+                function () {
+                    echo var_dump(
+                        is_plugin_active("elementor-pro/elementor-pro.php")
+                    );
+
+                    if (!is_plugin_active("elementor-pro/elementor-pro.php")) {
+                        wp_enqueue_style(
+                            "elementor-ad-eraser--admin-ui-elementor-pro-not-active",
+                            Elementor_Ad_Eraser_Globals::url() .
+                                "static/css/admin-ui-elementor-pro-not-active.css",
+                            [],
+                            Elementor_Ad_Eraser_Globals::$version
+                        );
+                    }
                 },
                 100
             );

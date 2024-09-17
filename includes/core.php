@@ -4,12 +4,25 @@ namespace ELEMENTOR_AD_ERASER;
 
 defined("ABSPATH") or die();
 
+require_once Elementor_Ad_Eraser_Globals::dir() .
+    "includes/is-gutenberg-active.php";
+
 if (!class_exists("Elementor_Ad_Eraser")) {
     final class Elementor_Ad_Eraser
     {
         public function __construct()
         {
             add_action("admin_enqueue_scripts", function () {
+                if (is_gutenberg_active()) {
+                    wp_enqueue_style(
+                        "elementor-ad-eraser--gutenberg",
+                        Elementor_Ad_Eraser_Globals::url() .
+                            "static/css/gutenberg.css",
+                        [],
+                        Elementor_Ad_Eraser_Globals::$version
+                    );
+                }
+
                 if (is_plugin_active("elementor/elementor.php")) {
                     wp_enqueue_style(
                         "elementor-ad-eraser--admin-ui",

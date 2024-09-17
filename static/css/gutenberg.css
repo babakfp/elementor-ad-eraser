@@ -1,0 +1,14 @@
+/* "Generate with Elementor AI" in right sidebar (Page) tab, under "Set featured image" button */
+.editor-post-featured-image .e-featured-image-ai {
+    display: none !important;
+}
+
+/* "Generate with Elementor AI" in right sidebar (Block) tab, under "Paragraph" stuff */
+.components-truncate .e-text-ai {
+    display: none !important;
+}
+
+/* Block editor inline toolbar > AI button (it's only icon) */
+.block-editor-block-toolbar__slot:has([aria-label="Edit with Elementor AI"]) {
+    display: none !important;
+}

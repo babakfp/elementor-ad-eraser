@@ -2,6 +2,8 @@
 .plugins-php
 /* in plugins table list */
 #the-list
+/* only elementor row */
+[data-plugin="elementor/elementor.php"]
 /* in title column */
 .plugin-title
 /* actions */

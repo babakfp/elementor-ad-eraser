@@ -12,3 +12,7 @@
 .block-editor-block-toolbar__slot:has([aria-label="Edit with Elementor AI"]) {
     display: none !important;
 }
+
+.e-excerpt-ai {
+    display: none !important;
+}

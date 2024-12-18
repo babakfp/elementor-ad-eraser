@@ -1,15 +1,21 @@
-/* Elements panel > Sticky ad at bottom: "Access all Pro widgets. Upgrade Now" */
+/* "Elements" panel > Sticky ad at bottom: "Access all Pro widgets. Upgrade Now" */
 #elementor-panel-get-pro-elements-sticky,
-/* Elements panel > Ad at bottom (end of scrollable area): "Get more with Elementor Pro", "Upgrade Now" */
+
+/* "Elements" panel > Ad at bottom (end of scrollable area): "Get more with Elementor Pro", "Upgrade Now" */
 #elementor-panel-get-pro-elements,
-/* Edit widget panel > "Need Help" link */
+
+/* Edit <widget-name> panel > "Need Help" link */
 #elementor-panel__editor__help,
-/* Edit widget panel > Ad at bottom (end of scrollable area): "Create captivating headings that rotate with the Animated Headline Widget.", "Upgrade Now" */
+
+/* Edit <widget-name> panel > Ad at bottom (end of scrollable area): "Create captivating headings that rotate with the Animated Headline Widget.", "Upgrade Now" */
 .elementor-nerd-box--upsale,
-/* Elements panel > "Upgrade" text in right side of collapsable sections heading */
+
+/* "Elements" panel > "Upgrade" text in right side of collapsable sections heading */
 .elementor-panel-heading-promotion,
-/* Edit widget panel > Generage with AI links in field labels */
+
+/* Edit <widget-name> panel > Generage with AI links in field labels */
 .elementor-control-field .e-ai-button
+
 /*  */ {
     display: none !important;
 }

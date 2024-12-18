@@ -23,9 +23,6 @@ if (!class_exists("Elementor_Ad_Eraser_Globals")) {
     final class Elementor_Ad_Eraser_Globals
     {
         public static $version = "1.0.0";
-        public static $tested_up_to = "6.6.2";
-        public static $requires_at_least = "5.0.0";
-        public static $requires_php = "7.4.33";
 
         public static function url()
         {

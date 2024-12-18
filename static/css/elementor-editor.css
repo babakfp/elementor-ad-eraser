@@ -14,13 +14,11 @@
 .elementor-panel-heading-promotion,
 
 /* Edit <widget-name> panel > Generage with AI links in field labels */
-.elementor-control-field .e-ai-button
+.elementor-control-field .e-ai-button,
+
+/* News button top header ("What's New") */
+#elementor-editor-wrapper-v2 .MuiGrid-root:nth-child(3) > .MuiStack-root > .MuiBox-root:nth-child(3):has(.MuiIconButton-root)
 
 /*  */ {
-    display: none !important;
-}
-
-/* News button top header */
-#elementor-editor-wrapper-v2 span.MuiBox-root:has(button[aria-label="What's New"]) {
     display: none !important;
 }

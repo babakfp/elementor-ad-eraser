@@ -19,8 +19,6 @@ if (!class_exists('Elementor_Ad_Eraser')) {
 
             add_action('elementor/editor/after_enqueue_styles', fn() => wp_enqueue_style('elementor-ad-eraser--elementor-editor', ELEMENTOR_AD_ERASER['URL'] . 'static/css/elementor-editor.css', [], ELEMENTOR_AD_ERASER['VERSION']));
 
-            add_action('elementor/preview/enqueue_styles', fn() => wp_enqueue_style('elementor-ad-eraser--elementor-preview', ELEMENTOR_AD_ERASER['URL'] . 'static/css/elementor-preview.css', [], ELEMENTOR_AD_ERASER['VERSION']));
-
             // Dequeue elementor ai styles and scripts
 
             add_action(

@@ -7,7 +7,7 @@ defined("ABSPATH") or die();
 /**
  * Plugin Name:                       Elementor Ad Eraser
  * Description:                       Removes intrusive ads from the Elementor interface for a cleaner, distraction-free experience.
- * Version:                           1.0.0
+ * Version:                           1.1.1
  * Tested up to:                      6.6.2
  * Requires at least:                 5.0.0
  * Requires PHP:                      7.4.33
@@ -19,21 +19,10 @@ defined("ABSPATH") or die();
  * Domain Path:                       /languages
  */
 
-if (!class_exists("Elementor_Ad_Eraser_Globals")) {
-    final class Elementor_Ad_Eraser_Globals
-    {
-        public static $version = "1.0.0";
+ define('ELEMENTOR_AD_ERASER', [
+    'VERSION' => '1.1.1',
+    'PATH' => plugin_dir_path(__FILE__),
+    'URL' => plugin_dir_url(__FILE__),
+]);
 
-        public static function url()
-        {
-            return plugin_dir_url(__FILE__);
-        }
-
-        public static function dir()
-        {
-            return plugin_dir_path(__FILE__);
-        }
-    }
-}
-
-require_once Elementor_Ad_Eraser_Globals::dir() . "includes/core.php";
+require_once ELEMENTOR_AD_ERASER['PATH'] . "includes/core.php";

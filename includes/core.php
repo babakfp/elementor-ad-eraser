@@ -4,7 +4,7 @@ namespace ELEMENTOR_AD_ERASER;
 
 defined("ABSPATH") or die();
 
-require_once Elementor_Ad_Eraser_Globals::dir() .
+require_once ELEMENTOR_AD_ERASER['PATH'] .
     "includes/is-gutenberg-active.php";
 
 if (!class_exists("Elementor_Ad_Eraser")) {
@@ -16,19 +16,19 @@ if (!class_exists("Elementor_Ad_Eraser")) {
                 if (is_gutenberg_active()) {
                     wp_enqueue_style(
                         "elementor-ad-eraser--gutenberg",
-                        Elementor_Ad_Eraser_Globals::url() .
+                        ELEMENTOR_AD_ERASER['URL'] .
                             "static/css/gutenberg.css",
                         [],
-                        Elementor_Ad_Eraser_Globals::$version
+                        ELEMENTOR_AD_ERASER['VERSION']
                     );
                 }
 
                 wp_enqueue_style(
                     "elementor-ad-eraser--admin-ui",
-                    Elementor_Ad_Eraser_Globals::url() .
+                    ELEMENTOR_AD_ERASER['URL'] .
                         "static/css/admin-ui.css",
                     [],
-                    Elementor_Ad_Eraser_Globals::$version
+                    ELEMENTOR_AD_ERASER['VERSION']
                 );
             });
 
@@ -36,10 +36,10 @@ if (!class_exists("Elementor_Ad_Eraser")) {
                 "elementor/editor/after_enqueue_styles",
                 fn() => wp_enqueue_style(
                     "elementor-ad-eraser--elementor-editor",
-                    Elementor_Ad_Eraser_Globals::url() .
+                    ELEMENTOR_AD_ERASER['URL'] .
                         "static/css/elementor-editor.css",
                     [],
-                    Elementor_Ad_Eraser_Globals::$version
+                    ELEMENTOR_AD_ERASER['VERSION']
                 )
             );
 
@@ -47,10 +47,10 @@ if (!class_exists("Elementor_Ad_Eraser")) {
                 "elementor/preview/enqueue_styles",
                 fn() => wp_enqueue_style(
                     "elementor-ad-eraser--elementor-preview",
-                    Elementor_Ad_Eraser_Globals::url() .
+                    ELEMENTOR_AD_ERASER['URL'] .
                         "static/css/elementor-preview.css",
                     [],
-                    Elementor_Ad_Eraser_Globals::$version
+                    ELEMENTOR_AD_ERASER['VERSION']
                 )
             );
 
@@ -118,10 +118,10 @@ if (!class_exists("Elementor_Ad_Eraser")) {
                     if (!is_plugin_active("elementor-pro/elementor-pro.php")) {
                         wp_enqueue_style(
                             "elementor-ad-eraser--admin-ui-elementor-pro-not-active",
-                            Elementor_Ad_Eraser_Globals::url() .
+                            ELEMENTOR_AD_ERASER['URL'] .
                                 "static/css/admin-ui-elementor-pro-not-active.css",
                             [],
-                            Elementor_Ad_Eraser_Globals::$version
+                            ELEMENTOR_AD_ERASER['VERSION']
                         );
                     }
                 },

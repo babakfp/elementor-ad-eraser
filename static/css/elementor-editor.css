@@ -27,6 +27,8 @@
 #elementor-navigator__footer__promotion,
 
 /* Edit "Heading" widget panel > "Content" tab > "Animated Headline widget" control. This targets controls that require pro version. */
-.elementor-control-type-promotion_control {
+.elementor-control-type-promotion_control,
+/* Edit "Heading" widget panel > "Advanced" tab > "Display Conditions" control. This targets controls that require pro version. */
+.elementor-control-display_conditions_pro {
     display: none !important;
 }

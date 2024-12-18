@@ -1,4 +1,5 @@
-/* canvas main rounded buttons AI button */
+/* This is not needed because we are using PHP hooks to delete the button, but just in case. */
+/* Canvas > "Drag widget here" box > AI button */
 .elementor-add-section-area-button.e-ai-layout-button {
     display: none !important;
 }

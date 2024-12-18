@@ -9,7 +9,7 @@
 }
 
 /* Block editor inline toolbar > AI button (it's only icon) */
-.block-editor-block-toolbar__slot:has([aria-label="Edit with Elementor AI"]) {
+.block-editor-block-toolbar__slot:has([aria-label='Edit with Elementor AI']) {
     display: none !important;
 }
 

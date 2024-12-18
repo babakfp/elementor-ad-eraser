@@ -1,3 +1,3 @@
 <?php
 
-defined("ABSPATH") or die();
+defined('ABSPATH') or die();

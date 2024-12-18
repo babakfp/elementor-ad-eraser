@@ -2,7 +2,7 @@
 
 namespace ELEMENTOR_AD_ERASER;
 
-defined("ABSPATH") or die();
+defined('ABSPATH') or die();
 
 /**
  * Plugin Name:                       Elementor Ad Eraser
@@ -19,10 +19,10 @@ defined("ABSPATH") or die();
  * Domain Path:                       /languages
  */
 
- define('ELEMENTOR_AD_ERASER', [
+define('ELEMENTOR_AD_ERASER', [
     'VERSION' => '1.1.1',
     'PATH' => plugin_dir_path(__FILE__),
     'URL' => plugin_dir_url(__FILE__),
 ]);
 
-require_once ELEMENTOR_AD_ERASER['PATH'] . "includes/core.php";
+require_once ELEMENTOR_AD_ERASER['PATH'] . 'includes/core.php';

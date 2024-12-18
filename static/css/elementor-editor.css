@@ -15,7 +15,6 @@
 }
 
 /* News button top header */
-#elementor-editor-wrapper-v2
-    span.MuiBox-root:has(button[aria-label="What's New"]) {
+#elementor-editor-wrapper-v2 span.MuiBox-root:has(button[aria-label="What's New"]) {
     display: none !important;
 }

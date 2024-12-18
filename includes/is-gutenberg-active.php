@@ -1,7 +1,7 @@
 <?php
 namespace ELEMENTOR_AD_ERASER;
 
-defined("ABSPATH") or die();
+defined('ABSPATH') or die();
 
 /**
  * Check if Gutenberg is active.
@@ -9,18 +9,17 @@ defined("ABSPATH") or die();
  *
  * @return bool
  */
-function is_gutenberg_active()
-{
+function is_gutenberg_active() {
     $gutenberg = false;
     $block_editor = false;
 
     // Gutenberg is installed and activated.
-    if (has_filter("replace_editor", "gutenberg_init")) {
+    if (has_filter('replace_editor', 'gutenberg_init')) {
         $gutenberg = true;
     }
 
     // Block editor
-    if (version_compare($GLOBALS["wp_version"], "5.0-beta", ">")) {
+    if (version_compare($GLOBALS['wp_version'], '5.0-beta', '>')) {
         $block_editor = true;
     }
 
@@ -28,11 +27,11 @@ function is_gutenberg_active()
         return false;
     }
 
-    if (!is_plugin_active("classic-editor/classic-editor.php")) {
+    if (!is_plugin_active('classic-editor/classic-editor.php')) {
         return true;
     }
 
-    $use_block_editor = get_option("classic-editor-replace") === "no-replace";
+    $use_block_editor = get_option('classic-editor-replace') === 'no-replace';
 
     return $use_block_editor;
 }

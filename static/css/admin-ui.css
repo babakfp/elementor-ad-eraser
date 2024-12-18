@@ -33,7 +33,7 @@ li:has([href="admin.php?page=go_elementor_pro"]) {
 }
 
 /* In WordPress sidebar menu > "Elementor" > "Add-ons" */
-.wp-submenu li:has([href="admin.php?page=elementor-apps"]) {
+.wp-submenu li:has([href='admin.php?page=elementor-apps']) {
     display: none !important;
 }
 
@@ -52,7 +52,7 @@ li:has([href="admin.php?page=go_elementor_pro"]) {
     }
 
     /* Paid ad-ons content and link on bottom */
-    .MuiPaper-root:has([href*="/wp-admin/admin.php?page=elementor-apps"]) {
+    .MuiPaper-root:has([href*='/wp-admin/admin.php?page=elementor-apps']) {
         display: none !important;
     }
 }

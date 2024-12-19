@@ -28,12 +28,12 @@
 /* in elementor menu on the sidebar */
 .wp-submenu
 /* the "Upgrade" element at the end of the menu */
-li:has([href$='/admin.php?page=go_elementor_pro']) {
+li:has([href*='admin.php?page=go_elementor_pro']) {
     display: none !important;
 }
 
 /* In WordPress sidebar menu > "Elementor" > "Add-ons" */
-.wp-submenu li:has([href$='/admin.php?page=elementor-apps']) {
+.wp-submenu li:has([href*='admin.php?page=elementor-apps']) {
     display: none !important;
 }
 
@@ -52,7 +52,7 @@ li:has([href$='/admin.php?page=go_elementor_pro']) {
     }
 
     /* Paid ad-ons content and link on bottom */
-    .MuiPaper-root:has([href$='/admin.php?page=elementor-apps']) {
+    .MuiPaper-root:has([href*='admin.php?page=elementor-apps']) {
         display: none !important;
     }
 }
@@ -66,7 +66,7 @@ li:has([href$='/admin.php?page=go_elementor_pro']) {
 
 /* Header in "/wp-admin/admin.php?page=elementor" */
 /* "Add-ons", "What's New" links */
-.e-admin-top-bar__bar-button[href$='/admin.php?page=elementor-apps'],
+.e-admin-top-bar__bar-button[href*='admin.php?page=elementor-apps'],
 .e-admin-top-bar__bar-button:has(.eicon-speakerphone) {
     display: none !important;
 }

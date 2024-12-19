@@ -1,5 +1,5 @@
 <?php
-namespace ELEMENTOR_AD_ERASER;
+namespace Elementor_Ad_Eraser;
 
 defined('ABSPATH') or die();
 

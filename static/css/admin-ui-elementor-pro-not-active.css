@@ -8,3 +8,11 @@ because they are paid features. */
 .wp-submenu li:has([href='admin.php?page=go_knowledge_base_site']) {
     display: none !important;
 }
+
+/* Header in "/wp-admin/admin.php?page=elementor" */
+#e-admin-top-bar-root {
+    display: none !important;
+}
+#e-admin-top-bar-root.e-admin-top-bar--active ~ #wpbody #wpbody-content {
+    margin-block-start: unset !important;
+}

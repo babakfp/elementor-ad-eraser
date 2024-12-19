@@ -63,3 +63,10 @@ li:has([href="admin.php?page=go_elementor_pro"]) {
 #e-image-ai-media-library {
     display: none !important;
 }
+
+/* Header in "/wp-admin/admin.php?page=elementor" */
+/* "Add-ons", "What's New" links */
+.e-admin-top-bar__bar-button[href$='?page=elementor-apps'],
+.e-admin-top-bar__bar-button:has(.eicon-speakerphone) {
+    display: none !important;
+}

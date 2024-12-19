@@ -8,7 +8,7 @@ require_once ELEMENTOR_AD_ERASER['PATH'] . 'includes/is-gutenberg-active.php';
 
 if (!class_exists('Elementor_Ad_Eraser')) {
     final class Elementor_Ad_Eraser {
-        public function __construct() {
+        function __construct() {
             add_action('admin_enqueue_scripts', function () {
                 if (is_gutenberg_active()) {
                     wp_enqueue_style('elementor-ad-eraser--gutenberg', ELEMENTOR_AD_ERASER['URL'] . 'static/css/gutenberg.css', [], ELEMENTOR_AD_ERASER['VERSION']);
@@ -88,6 +88,28 @@ if (!class_exists('Elementor_Ad_Eraser')) {
                 },
                 100
             );
+
+            add_action('elementor/element/editor-preferences/preferences/before_section_end', [$this, 'add_preferences_controls']);
+        }
+
+        function add_preferences_controls(\Elementor\Core\Settings\EditorPreferences\Model $preferences) {
+            $preferences->add_control('elementor_ad_eraser', [
+                'label' => esc_html__('Elementor Ad Eraser', 'elementor-ad-eraser'),
+                'type' => \Elementor\Controls_Manager::HEADING,
+                'separator' => 'before',
+            ]);
+
+            $preferences->add_control('hide_ai_ads', [
+                'label' => esc_html__('Hide AI Ads', 'elementor-ad-eraser'),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'default' => 'yes',
+            ]);
+
+            $preferences->add_control('hide_elementor_pro_ads', [
+                'label' => esc_html__('Hide Elementor Pro Ads', 'elementor-ad-eraser'),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'default' => 'yes',
+            ]);
         }
     }
 

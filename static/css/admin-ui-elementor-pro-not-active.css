@@ -10,7 +10,7 @@ because they are paid features. */
 }
 
 /* Header in "/wp-admin/admin.php?page=elementor" */
-#e-admin-top-bar__heading {
+.e-admin-top-bar__heading {
     display: none !important;
 }
 #e-admin-top-bar-root.e-admin-top-bar--active ~ #wpbody #wpbody-content {

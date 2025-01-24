@@ -80,3 +80,8 @@ li:has([href*='admin.php?page=go_elementor_pro']) {
 #e-image-ai-attachment-details {
     display: none !important;
 }
+
+/* /wp-admin/admin.php?page=elementor-role-manager - "Want to give access only to content?" */
+.elementor-role-go-pro {
+    display: none !important;
+}

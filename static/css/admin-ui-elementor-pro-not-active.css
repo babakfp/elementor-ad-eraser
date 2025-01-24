@@ -13,6 +13,9 @@ because they are paid features. */
 .e-admin-top-bar__heading {
     display: none !important;
 }
-#e-admin-top-bar-root.e-admin-top-bar--active ~ #wpbody #wpbody-content {
-    margin-block-start: unset !important;
+
+#menu-posts-elementor_library .elementor-app-link,
+a[href="edit.php?post_type=elementor_library&page=popup_templates"],
+#menu-posts-elementor_library ul li:has(a[href*="/wp-admin/admin.php?page=elementor-app"]) {
+    display: none !important;
 }

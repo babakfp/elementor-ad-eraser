@@ -1,3 +1,8 @@
+/* Hide non free widgets */
+.elementor-element-wrapper.elementor-element--promotion {
+    display: none !important;
+}
+
 /* "Elements" panel > Sticky ad at bottom: "Access all Pro widgets. Upgrade Now" */
 #elementor-panel-get-pro-elements-sticky,
 

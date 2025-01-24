@@ -70,3 +70,8 @@ li:has([href*='admin.php?page=go_elementor_pro']) {
 .e-admin-top-bar__bar-button:has(.eicon-speakerphone) {
     display: none !important;
 }
+
+/* Speed up your website with Image Optimizer by Elementor */
+.notice.e-notice[data-notice_id="plugin_image_optimization"] {
+    display: none !important;
+}

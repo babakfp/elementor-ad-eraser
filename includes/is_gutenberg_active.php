@@ -6,8 +6,6 @@ defined('ABSPATH') || exit();
 /**
  * Check if Gutenberg is active.
  * Must be used not earlier than plugins_loaded action fired.
- *
- * @return bool
  */
 function is_gutenberg_active() {
     $gutenberg = false;

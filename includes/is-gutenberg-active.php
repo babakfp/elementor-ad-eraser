@@ -1,7 +1,7 @@
 <?php
 namespace Elementor_Ad_Eraser;
 
-defined('ABSPATH') or die();
+defined('ABSPATH') || exit();
 
 /**
  * Check if Gutenberg is active.

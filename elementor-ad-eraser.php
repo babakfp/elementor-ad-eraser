@@ -7,8 +7,6 @@ defined('ABSPATH') || exit();
  * Plugin Name:                       Elementor Ad Eraser
  * Description:                       Removes intrusive ads from the Elementor interface for a cleaner, distraction-free experience.
  * Version:                           1.4.0
- * Tested up to:                      6.6.2
- * Requires at least:                 5.0.0
  * Requires PHP:                      7.4.33
  * Author:                            babakfp
  * Author URI:                        https://babakfp.ir

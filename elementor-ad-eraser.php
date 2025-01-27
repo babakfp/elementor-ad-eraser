@@ -6,7 +6,7 @@ defined('ABSPATH') || exit();
 /**
  * Plugin Name:               Elementor Ad Eraser
  * Description:               Removes intrusive ads from the Elementor interface for a cleaner, distraction-free experience.
- * Version:                   1.4.0
+ * Version:                   1.4.1
  * Requires PHP:              7.4
  * Author:                    Babak Farkhoopak
  * Author URI:                https://babakfp.ir
@@ -18,7 +18,7 @@ defined('ABSPATH') || exit();
 
 class Globals {
     public static $tag = 'elementor-ad-eraser';
-    public static $version = '1.4.0';
+    public static $version = '1.4.1';
 
     public static function url($path) {
         return plugin_dir_url(__FILE__) . $path;

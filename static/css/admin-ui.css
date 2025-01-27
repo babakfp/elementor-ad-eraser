@@ -1,30 +1,3 @@
-/* in plugins page (/wp-admin/plugins.php) */
-.plugins-php
-/* in plugins table list */
-#the-list
-/* only elementor row */
-[data-plugin="elementor/elementor.php"]
-/* in title column */
-.plugin-title
-/* actions */
-.row-actions {
-    /* "Get Elementor Pro" element */
-    .go_pro {
-        display: none !important;
-    }
-
-    /* Remove "|" after "Deactivate" */
-
-    /* "Deactivate" link wrapper */
-    .deactivate {
-        font-size: 0;
-    }
-    /* "Deactivate" link */
-    #deactivate-elementor {
-        font-size: 13px;
-    }
-}
-
 /* in elementor menu on the sidebar */
 .wp-submenu
 /* the "Upgrade" element at the end of the menu */

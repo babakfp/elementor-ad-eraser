@@ -30,6 +30,7 @@ if (!class_exists('Elementor_Ad_Eraser')) {
                 function () {
                     if (!is_plugin_active('elementor-pro/elementor-pro.php')) {
                         wp_enqueue_style('elementor-ad-eraser--admin-ui-elementor-pro-not-active', ELEMENTOR_AD_ERASER['URL'] . 'static/css/admin-ui-elementor-pro-not-active.css', [], ELEMENTOR_AD_ERASER['VERSION']);
+                        wp_enqueue_script('elementor-ad-eraser--admin-ui-elementor-pro-not-active', ELEMENTOR_AD_ERASER['URL'] . 'static/js/admin-ui-elementor-pro-not-active.js', [], ELEMENTOR_AD_ERASER['VERSION']);
                     }
                 },
                 100

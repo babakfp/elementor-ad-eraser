@@ -25,6 +25,6 @@ a[href='edit.php?post_type=elementor_library&page=popup_templates'],
 }
 
 /* Big banner saying "Go Pro, Go Limitless" */
-.ehe-admin-cb {
+#ehe-admin-cb {
     display: none !important;
 }

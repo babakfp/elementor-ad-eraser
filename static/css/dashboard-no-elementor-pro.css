@@ -23,3 +23,8 @@ a[href='edit.php?post_type=elementor_library&page=popup_templates'],
 #e-admin-top-bar-root a[href*='/wp-admin/admin.php?page=elementor-connect'] {
     display: none !important;
 }
+
+/* Big banner saying "Go Pro, Go Limitless" */
+.ehe-admin-cb {
+    display: none !important;
+}

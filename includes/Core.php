@@ -14,22 +14,22 @@ class Core {
             require Globals::dir('/includes/is_gutenberg_active.php');
 
             if (is_gutenberg_active()) {
-                wp_enqueue_style(Globals::$tag . '-gutenberg', Globals::url('/static/css/gutenberg.css'), [], Globals::$version);
+                wp_enqueue_style(Globals::$text_domain . '-gutenberg', Globals::url('/static/css/gutenberg.css'), [], Globals::$version);
             }
 
-            wp_enqueue_style(Globals::$tag . '-dashboard', Globals::url('/static/css/dashboard.css'), [], Globals::$version);
+            wp_enqueue_style(Globals::$text_domain . '-dashboard', Globals::url('/static/css/dashboard.css'), [], Globals::$version);
         });
 
-        add_action('elementor/editor/after_enqueue_styles', fn() => wp_enqueue_style(Globals::$tag . '-elementor-editor', Globals::url('/static/css/elementor-editor.css'), [], Globals::$version));
+        add_action('elementor/editor/after_enqueue_styles', fn() => wp_enqueue_style(Globals::$text_domain . '-elementor-editor', Globals::url('/static/css/elementor-editor.css'), [], Globals::$version));
 
-        add_action('elementor/preview/enqueue_styles', fn() => wp_enqueue_style(Globals::$tag . '-elementor-preview', Globals::url('/static/css/elementor-preview.css'), [], Globals::$version));
+        add_action('elementor/preview/enqueue_styles', fn() => wp_enqueue_style(Globals::$text_domain . '-elementor-preview', Globals::url('/static/css/elementor-preview.css'), [], Globals::$version));
 
         add_action(
             'admin_enqueue_scripts',
             function () {
                 if (!is_plugin_active('elementor-pro/elementor-pro.php')) {
-                    wp_enqueue_style(Globals::$tag . '-dashboard-no-elementor-pro', Globals::url('/static/css/dashboard-no-elementor-pro.css'), [], Globals::$version);
-                    wp_enqueue_script(Globals::$tag . '-dashboard-no-elementor-pro', Globals::url('/static/js/dashboard-no-elementor-pro.js'), [], Globals::$version);
+                    wp_enqueue_style(Globals::$text_domain . '-dashboard-no-elementor-pro', Globals::url('/static/css/dashboard-no-elementor-pro.css'), [], Globals::$version);
+                    wp_enqueue_script(Globals::$text_domain . '-dashboard-no-elementor-pro', Globals::url('/static/js/dashboard-no-elementor-pro.js'), [], Globals::$version);
                 }
             },
             100

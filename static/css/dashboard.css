@@ -1,3 +1,8 @@
+/* Hide: WordPress Admin Menu > "Elementor" > "Get Help" */
+.wp-submenu li:has([href*='admin.php?page=go_knowledge_base_site']) {
+    display: none !important;
+}
+
 /* In WordPress sidebar menu > "Elementor" > "Add-ons" */
 .wp-submenu li:has([href*='admin.php?page=elementor-apps']) {
     display: none !important;

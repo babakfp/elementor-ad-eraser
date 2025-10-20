@@ -18,19 +18,6 @@ class Core {
 
                 // wp-admin/admin.php?page=elementor-role-manager - "Want to give access only to content?"
                 remove_action('elementor/role/restrictions/controls', [\Elementor\Plugin::instance()->role_manager, 'get_go_pro_link_html']);
-
-                add_action(
-                    'elementor/admin/menu/register',
-                    function () {
-                        \Elementor\Plugin::instance()->admin_menu_manager->unregister('e-form-submissions');
-                        \Elementor\Plugin::instance()->admin_menu_manager->unregister('elementor_custom_fonts');
-                        \Elementor\Plugin::instance()->admin_menu_manager->unregister('elementor_custom_icons');
-                        \Elementor\Plugin::instance()->admin_menu_manager->unregister('elementor_custom_code');
-                        \Elementor\Plugin::instance()->admin_menu_manager->unregister('go_knowledge_base_site');
-                        \Elementor\Plugin::instance()->admin_menu_manager->unregister('go_elementor_pro');
-                    },
-                    \Elementor\Plugin::instance()->modules_manager->get_modules('promotions')::ADMIN_MENU_PROMOTIONS_PRIORITY + 1,
-                );
             }
 
             add_filter(

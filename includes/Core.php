@@ -7,7 +7,17 @@ class Core {
     public function __construct() {
         $this->add_custom_styles();
         $this->remove_elementor_ai();
-        $this->remove_elementor_action_links();
+
+        add_action( 'elementor/init', function() {
+            // Remove the "Get Elementor Pro" link in the plugins list from the Elementor plugin item.
+            remove_filter( 'plugin_action_links_' . ELEMENTOR_PLUGIN_BASE, [ \Elementor\Plugin::instance()->admin, 'plugin_action_links' ] );
+
+            // Enjoyed Elementor? Please leave us a ★★★★★ rating. We really appreciate your support!
+            remove_filter( 'admin_footer_text' , [ \Elementor\Plugin::instance()->admin, 'admin_footer_text' ] );
+
+            // wp-admin/admin.php?page=elementor-role-manager - "Want to give access only to content?"
+            remove_action( 'elementor/role/restrictions/controls', [ \Elementor\Plugin::instance()->role_manager, 'get_go_pro_link_html' ] );
+        });
     }
 
     private function add_custom_styles() {
@@ -90,14 +100,6 @@ class Core {
             },
             100
         );
-    }
-
-    private function remove_elementor_action_links() {
-        add_action( 'elementor/init', function() {
-            remove_filter( 'plugin_action_links_' . ELEMENTOR_PLUGIN_BASE, [ \Elementor\Plugin::instance()->admin, 'plugin_action_links' ] );
-            remove_filter( 'admin_footer_text' , [ \Elementor\Plugin::instance()->admin, 'admin_footer_text' ] );
-            remove_action( 'elementor/role/restrictions/controls', [ \Elementor\Plugin::instance()->role_manager, 'get_go_pro_link_html' ] );
-        });
     }
 }
 

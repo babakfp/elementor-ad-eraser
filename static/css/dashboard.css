@@ -58,3 +58,8 @@ li:has([href*='admin.php?page=go_elementor_pro']) {
 .elementor-role-go-pro {
     display: none !important;
 }
+
+/* Enjoyed Elementor? Please leave us a ★★★★★ rating. We really appreciate your support! */
+#footer-left {
+    display: none !important;
+}

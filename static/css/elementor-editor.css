@@ -32,3 +32,8 @@
 #elementor-navigator__footer__promotion {
     display: none !important;
 }
+
+/* Editor: "Let's make a productivity boost" floating pop up > "Set up a header" */
+#e-checklist [data-step-id="setup_header"] {
+    display: none !important;
+}

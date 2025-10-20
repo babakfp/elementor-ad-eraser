@@ -35,6 +35,11 @@ class Core {
                     \Elementor\Plugin::instance()->admin_menu_manager->unregister('go_elementor_pro');
                 }, \Elementor\Plugin::instance()->modules_manager->get_modules( 'promotions' )::ADMIN_MENU_PROMOTIONS_PRIORITY + 1 );
             }
+
+            add_filter( 'plugin_action_links_' . ELEMENTOR_PRO_PLUGIN_BASE, function ( $links ) {
+                unset( $links['go_advanced'] );
+                return $links;
+            }, 50 );
         });
     }
 

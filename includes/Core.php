@@ -16,7 +16,7 @@ class Core {
                 unset($additions_actions['go-pro']);
                 return $additions_actions;
             },
-            1000,
+            550 /* elementor-pro */ + 1,
         );
 
         add_action('elementor/init', function () {

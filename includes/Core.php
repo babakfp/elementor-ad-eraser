@@ -7,6 +7,7 @@ class Core {
     public function __construct() {
         $this->add_custom_styles();
         $this->remove_elementor_ai();
+        $this->remove_elementor_action_links();
     }
 
     private function add_custom_styles() {
@@ -29,7 +30,6 @@ class Core {
             function () {
                 if (!is_plugin_active('elementor-pro/elementor-pro.php')) {
                     wp_enqueue_style(Globals::$text_domain . '-dashboard-no-elementor-pro', Globals::url('/static/css/dashboard-no-elementor-pro.css'), [], Globals::$version);
-                    wp_enqueue_script(Globals::$text_domain . '-dashboard-no-elementor-pro', Globals::url('/static/js/dashboard-no-elementor-pro.js'), [], Globals::$version);
                 }
             },
             100
@@ -90,6 +90,12 @@ class Core {
             },
             100
         );
+    }
+
+    private function remove_elementor_action_links() {
+        add_action( 'elementor/init', function() {
+            remove_filter( 'plugin_action_links_' . ELEMENTOR_PLUGIN_BASE, [ \Elementor\Plugin::instance()->admin, 'plugin_action_links' ] );
+        });
     }
 }
 

@@ -16,7 +16,7 @@ class Core {
                 unset($additions_actions['go-pro']);
                 return $additions_actions;
             },
-            1000
+            1000,
         );
 
         add_action('elementor/init', function () {
@@ -40,7 +40,7 @@ class Core {
                         \Elementor\Plugin::instance()->admin_menu_manager->unregister('go_knowledge_base_site');
                         \Elementor\Plugin::instance()->admin_menu_manager->unregister('go_elementor_pro');
                     },
-                    \Elementor\Plugin::instance()->modules_manager->get_modules('promotions')::ADMIN_MENU_PROMOTIONS_PRIORITY + 1
+                    \Elementor\Plugin::instance()->modules_manager->get_modules('promotions')::ADMIN_MENU_PROMOTIONS_PRIORITY + 1,
                 );
             }
 
@@ -50,7 +50,7 @@ class Core {
                     unset($links['go_advanced']);
                     return $links;
                 },
-                50
+                50,
             );
         });
     }
@@ -77,7 +77,7 @@ class Core {
                     wp_enqueue_style(Globals::$text_domain . '-dashboard-no-elementor-pro', Globals::url('/static/css/dashboard-no-elementor-pro.css'), [], Globals::$version);
                 }
             },
-            100
+            100,
         );
     }
 
@@ -87,7 +87,7 @@ class Core {
             function () {
                 wp_dequeue_style('elementor-ai-editor');
             },
-            100
+            100,
         );
 
         add_action(
@@ -95,7 +95,7 @@ class Core {
             function () {
                 wp_dequeue_style('elementor-ai-layout-preview');
             },
-            100
+            100,
         );
 
         if (is_admin()) {
@@ -104,14 +104,14 @@ class Core {
                 function () {
                     wp_dequeue_script('elementor-ai-media-library');
                 },
-                100
+                100,
             );
             add_action(
                 'admin_head',
                 function () {
                     wp_dequeue_script('elementor-ai-media-library');
                 },
-                100
+                100,
             );
         }
 
@@ -121,7 +121,7 @@ class Core {
                 wp_dequeue_script('elementor-ai');
                 wp_dequeue_script('elementor-ai-layout');
             },
-            100
+            100,
         );
 
         add_action(
@@ -129,7 +129,7 @@ class Core {
             function () {
                 wp_dequeue_script('elementor-ai-gutenberg');
             },
-            100
+            100,
         );
 
         add_action(
@@ -140,7 +140,7 @@ class Core {
                 // "Optimize your images to enhance site performance by using Image Optimizer". I think this is a paid plugin (or at least it requires login). Not sure if this works.
                 wp_dequeue_script('media-hints');
             },
-            100
+            100,
         );
     }
 }

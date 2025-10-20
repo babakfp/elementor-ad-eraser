@@ -9,7 +9,7 @@ class Core {
         $this->remove_elementor_ai();
 
         add_action('elementor/init', function () {
-            // "Enjoyed Elementor? Please leave us a ★★★★★ rating. We really appreciate your support!"
+            // Remove code that replaces: "Thank you for creating with WordPress"
             remove_filter('admin_footer_text', [\Elementor\Plugin::instance()->admin, 'admin_footer_text']);
 
             if (!is_plugin_active('elementor-pro/elementor-pro.php')) {

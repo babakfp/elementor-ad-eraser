@@ -49,7 +49,7 @@ li:has([href*='admin.php?page=go_elementor_pro']) {
     display: none !important;
 }
 
-/* /wp-admin/upload.php - Edit with Elementor AI */
+/* wp-admin/upload.php > "Attachment details" modal > "Edit with Elementor AI" */
 #e-image-ai-attachment-details {
     display: none !important;
 }

@@ -30,13 +30,6 @@ li:has([href*='admin.php?page=go_elementor_pro']) {
     }
 }
 
-/* In media upload page (/wp-admin/upload.php) */
-.upload-php
-/* "Generate with Elementor AI" link */
-#e-image-ai-media-library {
-    display: none !important;
-}
-
 /* Header in "/wp-admin/admin.php?page=elementor" */
 /* "Add-ons", "What's New" links */
 .e-admin-top-bar__bar-button[href*='admin.php?page=elementor-apps'],
@@ -46,10 +39,5 @@ li:has([href*='admin.php?page=go_elementor_pro']) {
 
 /* Speed up your website with Image Optimizer by Elementor */
 .notice.e-notice[data-notice_id='plugin_image_optimization'] {
-    display: none !important;
-}
-
-/* wp-admin/upload.php > "Attachment details" modal > "Edit with Elementor AI" */
-#e-image-ai-attachment-details {
     display: none !important;
 }

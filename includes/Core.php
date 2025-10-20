@@ -71,6 +71,13 @@ class Core {
                 },
                 100
             );
+            add_action(
+                'admin_head',
+                function () {
+                    wp_dequeue_script('elementor-ai-media-library');
+                },
+                100
+            );
         }
 
         add_action(

@@ -9,37 +9,49 @@ class Core {
         $this->remove_elementor_ai();
 
         // elementor widget in wp-admin/index.php
-		add_filter( 'elementor/admin/dashboard_overview_widget/footer_actions', function( $additions_actions ) {
-			unset( $additions_actions['ai'] );
-			unset( $additions_actions['go-pro'] );
-			return $additions_actions;
-		}, 1000 );
+        add_filter(
+            'elementor/admin/dashboard_overview_widget/footer_actions',
+            function ($additions_actions) {
+                unset($additions_actions['ai']);
+                unset($additions_actions['go-pro']);
+                return $additions_actions;
+            },
+            1000
+        );
 
-        add_action( 'elementor/init', function() {
+        add_action('elementor/init', function () {
             // "Enjoyed Elementor? Please leave us a ★★★★★ rating. We really appreciate your support!"
-            remove_filter( 'admin_footer_text' , [ \Elementor\Plugin::instance()->admin, 'admin_footer_text' ] );
+            remove_filter('admin_footer_text', [\Elementor\Plugin::instance()->admin, 'admin_footer_text']);
 
             if (!is_plugin_active('elementor-pro/elementor-pro.php')) {
                 // Remove the "Get Elementor Pro" link in the plugins list from the Elementor plugin item.
-                remove_filter( 'plugin_action_links_' . ELEMENTOR_PLUGIN_BASE, [ \Elementor\Plugin::instance()->admin, 'plugin_action_links' ] );
+                remove_filter('plugin_action_links_' . ELEMENTOR_PLUGIN_BASE, [\Elementor\Plugin::instance()->admin, 'plugin_action_links']);
 
                 // wp-admin/admin.php?page=elementor-role-manager - "Want to give access only to content?"
-                remove_action( 'elementor/role/restrictions/controls', [ \Elementor\Plugin::instance()->role_manager, 'get_go_pro_link_html' ] );
+                remove_action('elementor/role/restrictions/controls', [\Elementor\Plugin::instance()->role_manager, 'get_go_pro_link_html']);
 
-                add_action( 'elementor/admin/menu/register', function() {
-                    \Elementor\Plugin::instance()->admin_menu_manager->unregister('e-form-submissions');
-                    \Elementor\Plugin::instance()->admin_menu_manager->unregister('elementor_custom_fonts');
-                    \Elementor\Plugin::instance()->admin_menu_manager->unregister('elementor_custom_icons');
-                    \Elementor\Plugin::instance()->admin_menu_manager->unregister('elementor_custom_code');
-                    \Elementor\Plugin::instance()->admin_menu_manager->unregister('go_knowledge_base_site');
-                    \Elementor\Plugin::instance()->admin_menu_manager->unregister('go_elementor_pro');
-                }, \Elementor\Plugin::instance()->modules_manager->get_modules( 'promotions' )::ADMIN_MENU_PROMOTIONS_PRIORITY + 1 );
+                add_action(
+                    'elementor/admin/menu/register',
+                    function () {
+                        \Elementor\Plugin::instance()->admin_menu_manager->unregister('e-form-submissions');
+                        \Elementor\Plugin::instance()->admin_menu_manager->unregister('elementor_custom_fonts');
+                        \Elementor\Plugin::instance()->admin_menu_manager->unregister('elementor_custom_icons');
+                        \Elementor\Plugin::instance()->admin_menu_manager->unregister('elementor_custom_code');
+                        \Elementor\Plugin::instance()->admin_menu_manager->unregister('go_knowledge_base_site');
+                        \Elementor\Plugin::instance()->admin_menu_manager->unregister('go_elementor_pro');
+                    },
+                    \Elementor\Plugin::instance()->modules_manager->get_modules('promotions')::ADMIN_MENU_PROMOTIONS_PRIORITY + 1
+                );
             }
 
-            add_filter( 'plugin_action_links_' . ELEMENTOR_PRO_PLUGIN_BASE, function ( $links ) {
-                unset( $links['go_advanced'] );
-                return $links;
-            }, 50 );
+            add_filter(
+                'plugin_action_links_' . ELEMENTOR_PRO_PLUGIN_BASE,
+                function ($links) {
+                    unset($links['go_advanced']);
+                    return $links;
+                },
+                50
+            );
         });
     }
 

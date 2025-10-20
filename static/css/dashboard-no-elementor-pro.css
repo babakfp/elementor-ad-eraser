@@ -19,6 +19,7 @@ a[href='edit.php?post_type=elementor_library&page=popup_templates'],
 }
 
 /* wp-admin/admin.php?page=elementor-element-manager */
-.components-flex-item a[href="https://go.elementor.com/go-pro-advanced-element-manager-permissions/"] {
+.components-flex-item a[href="https://go.elementor.com/go-pro-advanced-element-manager-permissions/"]
+{
     display: none !important;
 }

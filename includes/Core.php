@@ -8,17 +8,6 @@ class Core {
         $this->add_custom_styles();
         $this->remove_elementor_ai();
 
-        // elementor widget in wp-admin/index.php
-        add_filter(
-            'elementor/admin/dashboard_overview_widget/footer_actions',
-            function ($additions_actions) {
-                unset($additions_actions['ai']);
-                unset($additions_actions['go-pro']);
-                return $additions_actions;
-            },
-            550 /* elementor-pro */ + 1,
-        );
-
         add_action('elementor/init', function () {
             // "Enjoyed Elementor? Please leave us a ★★★★★ rating. We really appreciate your support!"
             remove_filter('admin_footer_text', [\Elementor\Plugin::instance()->admin, 'admin_footer_text']);

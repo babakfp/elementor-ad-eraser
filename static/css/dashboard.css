@@ -34,3 +34,8 @@
 .notice.e-notice[data-notice_id='plugin_image_optimization'] {
     display: none !important;
 }
+
+/* wp-admin/index.php > Dashboard Widgets > "Elementor Overview" > Footer Links */
+.e-overview__ai {
+    display: none !important;
+}

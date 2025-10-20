@@ -15,9 +15,6 @@ class Core {
             if (!is_plugin_active('elementor-pro/elementor-pro.php')) {
                 // Remove the "Get Elementor Pro" link in the plugins list from the Elementor plugin item.
                 remove_filter('plugin_action_links_' . ELEMENTOR_PLUGIN_BASE, [\Elementor\Plugin::instance()->admin, 'plugin_action_links']);
-
-                // wp-admin/admin.php?page=elementor-role-manager - "Want to give access only to content?"
-                remove_action('elementor/role/restrictions/controls', [\Elementor\Plugin::instance()->role_manager, 'get_go_pro_link_html']);
             }
         });
     }

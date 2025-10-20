@@ -44,3 +44,8 @@
 .e-overview__ai {
     display: none !important;
 }
+
+/* wp-admin/admin.php?page=elementor-role-manager > "Want to give access only to content?" */
+.elementor-role-go-pro {
+    display: none !important;
+}

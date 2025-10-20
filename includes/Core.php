@@ -13,7 +13,7 @@ class Core {
 			unset( $additions_actions['ai'] );
 			unset( $additions_actions['go-pro'] );
 			return $additions_actions;
-		} );
+		}, 1000 );
 
         add_action( 'elementor/init', function() {
             // "Enjoyed Elementor? Please leave us a ★★★★★ rating. We really appreciate your support!"

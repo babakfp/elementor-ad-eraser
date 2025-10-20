@@ -20,14 +20,16 @@ class Core {
                 remove_action('elementor/role/restrictions/controls', [\Elementor\Plugin::instance()->role_manager, 'get_go_pro_link_html']);
             }
 
-            add_filter(
-                'plugin_action_links_' . ELEMENTOR_PRO_PLUGIN_BASE,
-                function ($links) {
-                    unset($links['go_advanced']);
-                    return $links;
-                },
-                50,
-            );
+            if (is_plugin_active('elementor-pro/elementor-pro.php')) {
+                add_filter(
+                    'plugin_action_links_' . ELEMENTOR_PRO_PLUGIN_BASE,
+                    function ($links) {
+                        unset($links['go_advanced']);
+                        return $links;
+                    },
+                    50,
+                );
+            }
         });
     }
 

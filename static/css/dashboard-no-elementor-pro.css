@@ -18,11 +18,6 @@ a[href='edit.php?post_type=elementor_library&page=popup_templates'],
     display: none !important;
 }
 
-/* elementor widget in wp-admin/index.php */
-.e-overview__ai, .e-overview__go-pro {
-    display: none !important;
-}
-
 /* wp-admin/admin.php?page=elementor-element-manager */
 .components-flex-item a[href="https://go.elementor.com/go-pro-advanced-element-manager-permissions/"] {
     display: none !important;

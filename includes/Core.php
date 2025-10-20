@@ -95,6 +95,7 @@ class Core {
     private function remove_elementor_action_links() {
         add_action( 'elementor/init', function() {
             remove_filter( 'plugin_action_links_' . ELEMENTOR_PLUGIN_BASE, [ \Elementor\Plugin::instance()->admin, 'plugin_action_links' ] );
+            remove_filter( 'admin_footer_text' , [ \Elementor\Plugin::instance()->admin, 'admin_footer_text' ] );
         });
     }
 }

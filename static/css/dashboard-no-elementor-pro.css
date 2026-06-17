@@ -47,3 +47,9 @@ a[href='edit.php?post_type=elementor_library&page=popup_templates'],
 .components-flex-item:has(> [href="https://go.elementor.com/go-pro-element-manager-permissions/"]) {
     display: none !important;
 }
+
+/* wp-admin/admin.php?page=elementor-element-manager - Elementor Pro widgets manager */
+.components-panel__row:has([href="https://go.elementor.com/go-pro-element-manager/"]),
+.components-panel__row:has([href="https://go.elementor.com/go-pro-element-manager/"]) + .components-panel__row {
+    display: none !important;
+}

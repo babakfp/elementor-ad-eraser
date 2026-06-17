@@ -37,3 +37,8 @@ a[href='edit.php?post_type=elementor_library&page=popup_templates'],
 {
     display: none !important;
 }
+
+/* Hide "Upgrade" button in Elementor admin menu. */
+#toplevel_page_elementor-home li:has([href="admin.php?page=elementor-one-upgrade"]) {
+    display: none !important;
+}

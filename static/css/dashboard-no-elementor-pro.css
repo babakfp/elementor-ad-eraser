@@ -42,3 +42,8 @@ a[href='edit.php?post_type=elementor_library&page=popup_templates'],
 #toplevel_page_elementor-home li:has([href="admin.php?page=elementor-one-upgrade"]) {
     display: none !important;
 }
+
+/* wp-admin/admin.php?page=elementor-element-manager - "Upgrade Now" */
+.components-flex-item:has(> [href="https://go.elementor.com/go-pro-element-manager-permissions/"]) {
+    display: none !important;
+}

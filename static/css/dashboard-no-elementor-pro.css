@@ -1,4 +1,6 @@
-/* Hide because they are paid features: WordPress Admin Menu > "Elementor" > "Custom Code", "Custom Icons", "Custom Fonts", "Submissions", "Upgrade" */
+/* Hide because they are paid features: WordPress Admin Menu > "Elementor" > "Home (v4)", "Theme Builder (v4)", "Custom Code", "Custom Icons", "Custom Fonts", "Submissions", "Upgrade" */
+.wp-submenu li:has(> [href*='admin.php?page=elementor-home']),
+.wp-submenu li:has(> [href*='admin.php?page=elementor-app']),
 .wp-submenu li:has(> [href*='admin.php?page=elementor_custom_code']),
 .wp-submenu li:has(> [href*='admin.php?page=elementor_custom_icons']),
 .wp-submenu li:has(> [href*='admin.php?page=e-form-submissions']),

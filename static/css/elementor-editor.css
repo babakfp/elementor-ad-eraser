@@ -1,8 +1,7 @@
 /* Hide non free widgets */
 .elementor-element-wrapper.elementor-element--promotion,
 /* v4 */
-.elementor-element-wrapper:has(.elementor-element i.eicon-lock)
- {
+.elementor-element-wrapper:has(.elementor-element i.eicon-lock) {
     display: none !important;
 }
 
@@ -44,8 +43,21 @@
 }
 
 /* "Widgets", "Components", "Globals" tabs */
-.elementor-component-tab.elementor-panel-navigation-tab[data-tab="categories"],
-.elementor-component-tab.elementor-panel-navigation-tab[data-tab="components"],
-.elementor-component-tab.elementor-panel-navigation-tab[data-tab="global"] {
+.elementor-component-tab.elementor-panel-navigation-tab[data-tab='categories'],
+.elementor-component-tab.elementor-panel-navigation-tab[data-tab='components'],
+.elementor-component-tab.elementor-panel-navigation-tab[data-tab='global'] {
+    display: none !important;
+}
+
+/* "Custom Widget" (Angie) accordion in Widgets Panel
+It's just an ad. Based on what Claude said, it needs logging in to an elementor account and you get limited usage.
+Hide the whole accordion if empty. */
+#elementor-panel-category-custom-widgets:has(.elementor-panel-category-custom-widgets-empty) {
+    display: none !important;
+}
+
+/* Hide paid controsl */
+.elementor-control[class*="elementor-control-"][class*="_pro"]
+/* .elementor-control:has(.eicon-upgrade-crown-full,[class*='e-control-'],[class*='-promotion']) */ {
     display: none !important;
 }

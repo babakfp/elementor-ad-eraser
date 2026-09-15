@@ -41,17 +41,19 @@ a[href='edit.php?post_type=elementor_library&page=popup_templates'],
 }
 
 /* Hide "Upgrade" button in Elementor admin menu. */
-#toplevel_page_elementor-home li:has([href="admin.php?page=elementor-one-upgrade"]) {
+#toplevel_page_elementor-home li:has([href='admin.php?page=elementor-one-upgrade']) {
     display: none !important;
 }
 
 /* wp-admin/admin.php?page=elementor-element-manager - "Upgrade Now" */
-.components-flex-item:has(> [href="https://go.elementor.com/go-pro-element-manager-permissions/"]) {
+.components-flex-item:has(> [href="https://go.elementor.com/go-pro-element-manager-permissions/"])
+{
     display: none !important;
 }
 
 /* wp-admin/admin.php?page=elementor-element-manager - Elementor Pro widgets manager */
 .components-panel__row:has([href="https://go.elementor.com/go-pro-element-manager/"]),
-.components-panel__row:has([href="https://go.elementor.com/go-pro-element-manager/"]) + .components-panel__row {
+.components-panel__row:has([href="https://go.elementor.com/go-pro-element-manager/"]) + .components-panel__row
+{
     display: none !important;
 }

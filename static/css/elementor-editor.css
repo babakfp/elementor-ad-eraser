@@ -1,5 +1,8 @@
 /* Hide non free widgets */
-.elementor-element-wrapper.elementor-element--promotion {
+.elementor-element-wrapper.elementor-element--promotion,
+/* v4 */
+.elementor-element-wrapper:has(.elementor-element i.eicon-lock)
+ {
     display: none !important;
 }
 
@@ -37,5 +40,12 @@
 
 /* Editor: "Let's make a productivity boost" floating pop up > "Set up a header" */
 #e-checklist [data-step-id='setup_header'] {
+    display: none !important;
+}
+
+/* "Widgets", "Components", "Globals" tabs */
+.elementor-component-tab.elementor-panel-navigation-tab[data-tab="categories"],
+.elementor-component-tab.elementor-panel-navigation-tab[data-tab="components"],
+.elementor-component-tab.elementor-panel-navigation-tab[data-tab="global"] {
     display: none !important;
 }

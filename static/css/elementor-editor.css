@@ -7,6 +7,8 @@
 
 /* "Elements" panel > Sticky ad at bottom: "Access all Pro widgets. Upgrade Now" */
 #elementor-panel-get-pro-elements-sticky,
+/* Access all Pro widgets. Upgrade Now */
+.elementor-panel-editor-sticky-promotion:has(> .elementor-get-pro-sticky-message),
 
 /* "Elements" panel > Ad at bottom (end of scrollable area): "Get more with Elementor Pro", "Upgrade Now" */
 #elementor-panel-get-pro-elements,
@@ -61,3 +63,4 @@ Hide the whole accordion if empty. */
 /* .elementor-control:has(.eicon-upgrade-crown-full,[class*='e-control-'],[class*='-promotion']) */ {
     display: none !important;
 }
+
